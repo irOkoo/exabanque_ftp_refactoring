@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+ftp_provider_disabled_algorithms_user,ftp_provider_disabled_algorithms_user,model_ftp_provider_disabled_algorithms,base.group_user,1,1,1,0
+ftp_provider_disabled_algorithms_system,ftp_provider_disabled_algorithms_system,model_ftp_provider_disabled_algorithms,base.group_system,1,1,1,1
+
+ftp_provider_user,ftp_provider_user,model_ftp_provider,base.group_user,1,1,1,0
+ftp_provider_system,ftp_provider_system,model_ftp_provider,base.group_system,1,1,1,1

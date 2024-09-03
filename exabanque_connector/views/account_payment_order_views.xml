@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="account_payment_order_form_inherit" model="ir.ui.view">
+        <field name="name">account.payment.order.form.inherit</field>
+        <field name="model">account.payment.order</field>
+        <field name="inherit_id" ref="account_payment_order.account_payment_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/div" position="inside">
+                <field name="log_transaction_id" invisible="1"/>
+                <button class="oe_stat_button" string="Linked Transaction" name="action_log_transaction" type="object" icon="fa-bars" attrs="{'invisible': [('log_transaction_id', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

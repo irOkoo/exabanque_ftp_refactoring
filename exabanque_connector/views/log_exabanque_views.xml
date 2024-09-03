@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="exabanque_log_form_view" model="ir.ui.view">
+        <field name="name">log.exabanque.form</field>
+        <field name="model">log.exabanque</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Log File">
+                        <field name="log_file_data" filename="log_file_name" widget="binary" readonly="1"/>
+                    </group>
+                    <group string="Odoo details">
+                        <field name="date" readonly="1"/>
+                        <field name="company_id" readonly="1"/>
+                        <field name="transaction_id" readonly="1"/>
+                    </group>
+                    <group string="Log Details">
+                        <field name="direction" readonly="1"/>
+                        <field name="directory" readonly="1"/>
+                        <field name="file_name" readonly="1"/>
+                        <field name="com_ref" readonly="1"/>
+                        <field name="result" readonly="1"/>
+                        <field name="result_error_code" attrs="{'invisible': [('result', '=', 'ok')]}" readonly="1"/>
+                        <field name="report" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="exabanque_log_tree_view" model="ir.ui.view">
+        <field name="name">log.exabanque.tree</field>
+        <field name="model">log.exabanque</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="transaction_id" readonly="1"/>
+                <field name="direction" readonly="1"/>
+                <field name="directory" readonly="1"/>
+                <field name="result" readonly="1"/>
+                <field name="result_error_code" attrs="{'invisible': [('result', '=', 'ok')]}" readonly="1"/>
+                <field name="company_id" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_exabanque_log" model="ir.actions.act_window">
+        <field name="name">Exabanque Logs</field>
+        <field name="res_model">log.exabanque</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="exabanque_log_tree_view"/>
+    </record>
+</odoo>

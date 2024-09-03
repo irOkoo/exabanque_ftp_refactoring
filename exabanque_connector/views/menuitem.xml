@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem
+        id="menu_root_exabanque"
+        name="Exabanque"
+        sequence="100"
+        web_icon="exabanque_connector,static/description/exabanque_icon.png"/>
+
+    <menuitem
+        id="menu_exabanque_transactions"
+        name="Transactions"
+        parent="exabanque_connector.menu_root_exabanque"
+        action="exabanque_connector.action_transaction_log"
+        sequence="5"/>
+
+    <menuitem
+        id="menu_exabanque_logs"
+        name="Logs"
+        parent="exabanque_connector.menu_root_exabanque"
+        sequence="10"/>
+
+        <menuitem
+            id="menu_exabanque_exabanque_log"
+            name="Exabanque"
+            parent="exabanque_connector.menu_exabanque_logs"
+            action="exabanque_connector.action_exabanque_log"
+            sequence="15"/>
+
+
+        <menuitem
+            id="menu_exabanque_error_log"
+            name="Errors"
+            parent="exabanque_connector.menu_exabanque_logs"
+            action="exabanque_connector.action_error_log"
+            sequence="20"/>
+
+    <menuitem
+        id="menu_exabanque_settings"
+        name="Settings"
+        parent="exabanque_connector.menu_root_exabanque"
+        sequence="20"/>
+
+        <menuitem
+            id="menu_exabanque_settings_base_connector"
+            name="Transactions"
+            parent="exabanque_connector.menu_exabanque_settings"
+            action="exabanque_connector.action_base_connector"
+            sequence="10"/>
+
+        <menuitem
+            id="menu_exabanque_settings_base_ftp"
+            name="FTP"
+            parent="exabanque_connector.menu_exabanque_settings"
+            action="exabanque_connector.action_base_ftp"
+            sequence="20"/>
+</odoo>

@@ -1,0 +1,648 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ftp_provider
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240624\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-12 15:11+0000\n"
+"PO-Revision-Date: 2024-08-12 15:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__allow_agent
+msgid "Allow Agent"
+msgstr ""
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__autoaddpolicy
+msgid "Auto Add Policy"
+msgstr ""
+
+#. module: ftp_provider
+#: model:ir.model,name:ftp_provider.model_ftp_provider_disabled_algorithms
+msgid "Base FTP Disabled Algorithm"
+msgstr ""
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Basic Methods"
+msgstr "Méthodes basiques"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Choose whether to connect via a password or a Key"
+msgstr ""
+"Choisissez si vous voulez vous connecter via un mot de passe ou une clé"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ftp_provider
+#: model:ir.ui.menu,name:ftp_provider.menu_ftp_provider_config
+msgid "Configuration"
+msgstr ""
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid "Connection successfully established"
+msgstr "Connection établie avec succès"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Count Directory Elements"
+msgstr "Compter les éléments du répertoire"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__create_uid
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider_disabled_algorithms__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__create_date
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider_disabled_algorithms__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Delete File By Index"
+msgstr "Supprimer un fichier par index"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Delete File By Name"
+msgstr "Supprimer un fichier par nom"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__disabled_algorithms
+msgid "Disabled Algorithms"
+msgstr "Algorithmes désactivés"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__display_name
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider_disabled_algorithms__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Enter here the IP or Host name of the ftp/sftp server"
+msgstr "Entrez ici l'IP ou le nom d'hôte du serveur ftp/sftp"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Enter here the connection port of the ftp/sftp server"
+msgstr "Entrez ici le port de connexion du serveur ftp/sftp"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Enter here the user login of the ftp/sftp server"
+msgstr "Entrez ici le login de l'utilisateur du serveur ftp/sftp"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Enter here the user password of the ftp/sftp server"
+msgstr "Entrez ici le mot de passe de l'utilisateur du serveur ftp/sftp"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider_disabled_algorithms__ftp_provider_id
+#: model:ir.model.fields.selection,name:ftp_provider.selection__ftp_provider__protocol__ftp
+msgid "FTP"
+msgstr ""
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "FTP IDs"
+msgstr ""
+
+#. module: ftp_provider
+#: model:ir.ui.menu,name:ftp_provider.menu_ftp_provider
+msgid "FTP Provider"
+msgstr ""
+
+#. module: ftp_provider
+#: model:ir.actions.act_window,name:ftp_provider.action_ftp_provider_config
+msgid "FTP Provider Configuration"
+msgstr ""
+
+#. module: ftp_provider
+#: model:ir.model,name:ftp_provider.model_ftp_provider
+msgid ""
+"FTP Provider is basically a list of functions that you can use with your own"
+" modules"
+msgstr ""
+"FTP Provider est essentiellement une liste de fonctions que vous pouvez "
+"utiliser avec vos propres modules"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid ""
+"Failed to connect to FTP server:\n"
+" %s"
+msgstr ""
+"Impossible de se connecter au serveur FTP :\n"
+" %s"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid ""
+"Failed to connect to SFTP server:\n"
+" %s"
+msgstr ""
+"Impossible de se connecter au serveur SFTP :\n"
+" %s"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid ""
+"Failed to create folder:\n"
+" %s"
+msgstr ""
+"Impossible de créer le dossier :\n"
+" %s"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid ""
+"Failed to delete file:\n"
+" %s"
+msgstr ""
+"Impossible de supprimer le fichier :\n"
+" %s"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid ""
+"Failed to delete folder:\n"
+" %s"
+msgstr ""
+"Impossible de supprimer le dossier :\n"
+" %s"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid ""
+"Failed to download file:\n"
+" %s"
+msgstr ""
+"Impossible de télécharger le fichier :\n"
+" %s"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid ""
+"Failed to get files:\n"
+" %s"
+msgstr ""
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid ""
+"Failed to move file:\n"
+" %s"
+msgstr ""
+"Impossible de déplacer le fichier :\n"
+" %s"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid ""
+"Failed to upload file:\n"
+" %s"
+msgstr ""
+"Impossible de télécharger le fichier :\n"
+" %s"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Fields"
+msgstr "Champs"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__test_filedata
+msgid "File Data"
+msgstr "Données fichier"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "File Methods"
+msgstr "Méthodes de fichier"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__test_filename
+msgid "File Name"
+msgstr "Nom du fichier"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Folder Methods"
+msgstr "Méthodes de dossier"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__test_foldername
+msgid "Folder Name"
+msgstr "Nom du dossier"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Generate 'ssh-ed25519' Key"
+msgstr "Générer une clé 'ssh-ed25519'"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Generate 'ssh-rsa' Key"
+msgstr "énérer une clé 'ssh-rsa'"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Get All Files By Matching Name"
+msgstr "Télécharger tous les fichiers dont le nom correspond"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Get File Data"
+msgstr "Récupérer les données du fichier"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Get File Name"
+msgstr "Récupérer le nom du fichier"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Hide Test Features"
+msgstr "Cacher les fonctionnalités de test"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__server_host
+msgid "Host"
+msgstr "Hôte"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__server_port
+msgid "Host Port"
+msgstr "Port de l'Hôte"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__id
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider_disabled_algorithms__id
+msgid "ID"
+msgstr ""
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__test_index
+msgid "Index"
+msgstr ""
+
+#. module: ftp_provider
+#: model:ir.model.fields.selection,name:ftp_provider.selection__ftp_provider__password_or_key__ed25519_key
+msgid "Key - 'ssh-ed25519'"
+msgstr "Clé - 'ssh-ed25519'"
+
+#. module: ftp_provider
+#: model:ir.model.fields.selection,name:ftp_provider.selection__ftp_provider__password_or_key__rsa_key
+msgid "Key - 'ssh-rsa'"
+msgstr "Clé - 'ssh-rsa'"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid "Key already exists"
+msgstr "Une clé existe déjà"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid "Key successfully generated, please refresh the page"
+msgstr "Clé générée avec succès, veuillez rafraîchir la page"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__write_uid
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider_disabled_algorithms__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__write_date
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider_disabled_algorithms__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "List Directory"
+msgstr "Lister le répertoire"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid ""
+"List here what algorithms you dont wanna try to connect via when logging on "
+"sftp. For exemple: - 'ssh-ed25519' - 'ecdsa-sha2-nistp256' - 'ecdsa-"
+"sha2-nistp384' - 'ecdsa-sha2-nistp521' - 'ssh-rsa' - 'rsa-sha2-512' - 'rsa-"
+"sha2-256' - 'ssh-dss'"
+msgstr ""
+"Listez ici les algorithmes que vous ne voulez pas utiliser pour vous "
+"connecter via sftp. Par exemple : - 'ssh-ed25519' - 'ecdsa-sha2-nistp256' - "
+"'ecdsa-sha2-nistp384' - 'ecdsa-sha2-nistp521' - 'ssh-rsa' - 'rsa-sha2-512' -"
+" 'rsa-sha2-256' - 'ssh-dss'"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__look_for_keys
+msgid "Look for Keys"
+msgstr ""
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Make Directory"
+msgstr "Créer un dossier"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Methods Testing"
+msgstr "Méthodes de test"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Move File"
+msgstr "Déplacer un fichier"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__name
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider_disabled_algorithms__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: ftp_provider
+#: model:ir.model.fields.selection,name:ftp_provider.selection__ftp_provider__password_or_key__password
+msgid "Password"
+msgstr "Mot de passe"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__test_path
+msgid "Path"
+msgstr "Chemin d'accès"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid "Please enter a valid server host"
+msgstr "Entrez un hôte de serveur valide"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid "Please enter a valid server port"
+msgstr "Entrez un port de serveur valide"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid ""
+"Please enter a valid server port, 21 is the default port for FTP not SFTP"
+msgstr ""
+"Entrez un port de serveur valide, 21 est le port par défaut pour FTP, et non"
+" SFTP"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid "Please enter a valid user login"
+msgstr "Entrez un login d'utilisateur valide"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid "Please enter a valid user password"
+msgstr "Entrez un mot de passe d'utilisateur valide"
+
+#. module: ftp_provider
+#. odoo-python
+#: code:addons/ftp_provider/models/ftp_provider.py:0
+#, python-format
+msgid "Please generate or enter a valid RSA key"
+msgstr "Entrez une clé RSA valide"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid ""
+"Policy for automatically adding the hostname and new host key to the local "
+"HostKeys object, and saving it."
+msgstr ""
+"Politique pour ajouter automatiquement le nom d'hôte et la nouvelle clé "
+"d'hôte à l'objet HostKeys local, et l'enregistrer."
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Private key"
+msgstr "Clé privée"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__protocol
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Protocol"
+msgstr "Protocole"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Protocol used by the ftp server"
+msgstr "Protocole utilisé par le serveur ftp"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Provider Infos"
+msgstr "Infos de l'hôte"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Public key '.pub'"
+msgstr "Clé publique '.pub'"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "RSA Key"
+msgstr "Clé RSA"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Remove Directory"
+msgstr "Supprimer un dossier"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Response"
+msgstr "Réponse"
+
+#. module: ftp_provider
+#: model:ir.model.fields.selection,name:ftp_provider.selection__ftp_provider__protocol__sftp
+msgid "SFTP"
+msgstr ""
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "SFTP IDs"
+msgstr ""
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "SFTP details"
+msgstr "Détails SFTP"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__test_path_secondary
+msgid "Secondary Path"
+msgstr "Chemin d'accès secondaire"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Set to False to disable connecting to the SSH agent"
+msgstr "Mettez à False pour désactiver la connexion à l'agent SSH"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid ""
+"Set to False to disable searching for discoverable private key files in "
+"~/.ssh/"
+msgstr ""
+"Mettez à False pour désactiver la recherche de fichiers de clé privée "
+"découvrables dans ~/.ssh/"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__show_test_features
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Show Test Features"
+msgstr "Afficher les fonctionnalités de test"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Test - Contains returns from test functions"
+msgstr "Test - Contient les retours des fonctions de test"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Test - File data, used by 'Upload File', 'Move File'"
+msgstr ""
+"Test - Données du fichier, utilisées par 'Télécharger le fichier', 'Déplacer"
+" le fichier'"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid ""
+"Test - Filename completed by 'Get File Name' and used by 'Upload File', "
+"'Move File', 'Delete File By Name'"
+msgstr ""
+"Test - Nom de fichier complété par 'Récupérer le nom du fichier' et utilisé "
+"par 'Télécharger le fichier', 'Déplacer le fichier', 'Supprimer le fichier "
+"par nom'"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Test - Folder name for 'Make Directory' and 'Remove Directory'"
+msgstr ""
+"Test - Nom du dossier pour 'Créer un dossier' et 'Supprimer un dossier'"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid ""
+"Test - Index, 0 for first item in the list, 1 for second, ..., used by 'Get "
+"File Data', 'Get File Name', Delete File By Index'"
+msgstr ""
+"Test - Index, 0 pour le premier élément de la liste, 1 pour le second, ..., "
+"utilisé par 'Récupérer les données du fichier', 'Récupérer le nom du "
+"fichier', 'Supprimer le fichier par index'"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Test - Primary Path, used by all test functions"
+msgstr "Test - Chemin principal, utilisé par toutes les fonctions de test"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Test - Secondary Path, used only by copy (from primary to secondary)"
+msgstr ""
+"Test - Chemin secondaire, utilisé uniquement par la copie (du primaire au "
+"secondaire)"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Test Connection"
+msgstr "Tester la connexion"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__test_text
+msgid "Text"
+msgstr "Texte"
+
+#. module: ftp_provider
+#: model_terms:ir.ui.view,arch_db:ftp_provider.ftp_provider_settings_form
+msgid "Upload File"
+msgstr "Uploader un fichier"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__password_or_key
+msgid "Use password or Encoded Key"
+msgstr "Utilisez un mot de passe ou une clé encodée"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__user_login
+msgid "User Login"
+msgstr "Identifiant de l'utilisateur"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__user_password
+msgid "User Password"
+msgstr "Mot de passe de l'utilisateur"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__user_private_key_data
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__user_private_key_name
+msgid "User Private Key"
+msgstr "Clé privée de l'utilisateur"
+
+#. module: ftp_provider
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__user_public_key_data
+#: model:ir.model.fields,field_description:ftp_provider.field_ftp_provider__user_public_key_name
+msgid "User Public Key .pub"
+msgstr "Clé publique de l'utilisateur .pub"

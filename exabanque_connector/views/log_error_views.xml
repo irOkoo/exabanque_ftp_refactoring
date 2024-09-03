@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="log_error_form_view" model="ir.ui.view">
+        <field name="name">log.error.form</field>
+        <field name="model">log.error</field>
+        <field name="arch" type="xml">
+            <form string="Sync Error">
+                <sheet>
+                    <field name="name"/>
+                    <group string="Model">
+                        <field name="transaction_id"/>
+                        <field name="model"/>
+                        <field name="operation"/>
+                    </group>
+                    <group string="Error">
+                        <field name="error_message"/>
+                        <field name="timestamp"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="log_error_tree_view" model="ir.ui.view">
+        <field name="name">log.error.tree</field>
+        <field name="model">log.error</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="transaction_id"/>
+                <field name="model"/>
+                <field name="operation"/>
+                <field name="error_message"/>
+                <field name="timestamp"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_error_log" model="ir.actions.act_window">
+        <field name="name">Errors</field>
+        <field name="res_model">log.error</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="log_error_tree_view"/>
+    </record>
+</odoo>

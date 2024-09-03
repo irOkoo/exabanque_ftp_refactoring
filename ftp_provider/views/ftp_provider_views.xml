@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="ftp_provider_settings_form" model="ir.ui.view">
+        <field name="name">ftp.provider.config.form</field>
+        <field name="model">ftp.provider</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="user_private_key_data" attrs="{'invisible': True}"/>
+                <field name="protocol" attrs="{'invisible': True}"/>
+                <field name="password_or_key" attrs="{'invisible': True}"/>
+                <field name="show_test_features" attrs="{'invisible': True}"/>
+                <header>
+                    <button name="action_test_connection" string="Test Connection" type="object" class="btn btn-sm btn-primary"/>
+                    <button name="action_generate_ssh_rsa_key" string="Generate 'ssh-rsa' Key" type="object" class="btn btn-sm btn-primary" attrs="{'invisible': ['|','|',('user_private_key_data', '=', True),('password_or_key', '=', 'password'),('protocol', '=', 'ftp')]}"/>
+                    <button name="action_generate_ssh_ed25519_key" string="Generate 'ssh-ed25519' Key" type="object" class="btn btn-sm btn-primary" attrs="{'invisible': ['|','|',('user_private_key_data', '=', True),('password_or_key', '=', 'password'),('protocol', '=', 'ftp')]}"/>
+                    <button name="action_show_test_features" string="Show Test Features" type="object" class="btn btn-sm btn-secondary" attrs="{'invisible': [('show_test_features', '=', True)]}"/>
+                    <button name="action_show_test_features" string="Hide Test Features" type="object" class="btn btn-sm btn-secondary" attrs="{'invisible': [('show_test_features', '=', False)]}"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group string="Provider Infos">
+                            <field name="name"/>
+                            <field name="company_id"/>
+                        </group>
+                        <group string="Protocol">
+                            <field name="protocol" help="Protocol used by the ftp server"/>
+                        </group>
+                        <group string="SFTP IDs" attrs="{'invisible': [('protocol', '=', 'ftp')]}">
+                            <field name="server_host" help="Enter here the IP or Host name of the ftp/sftp server"/>
+                            <field name="server_port" help="Enter here the connection port of the ftp/sftp server"/>
+                            <field name="user_login" help="Enter here the user login of the ftp/sftp server"/>
+                            <field name="password_or_key" help="Choose whether to connect via a password or a Key"/>
+                            <field name="user_password" attrs="{'invisible': [('password_or_key', '!=', 'password')]}" help="Enter here the user password of the ftp/sftp server"/>
+                        </group>
+                        <group string="SFTP details" attrs="{'invisible': [('protocol', '=', 'ftp')]}">
+                            <field name="autoaddpolicy" widget="boolean_toogle" help="Policy for automatically adding the hostname and new host key to the local HostKeys object, and saving it."/>
+                            <field name="allow_agent" widget="boolean_toogle" help="Set to False to disable connecting to the SSH agent"/>
+                            <field name="look_for_keys" widget="boolean_toogle" help="Set to False to disable searching for discoverable private key files in ~/.ssh/"/>
+                            <field name="disabled_algorithms" widget="many2many_tags" help="List here what algorithms you dont wanna try to connect via when logging on sftp. For exemple: - 'ssh-ed25519' - 'ecdsa-sha2-nistp256' - 'ecdsa-sha2-nistp384' - 'ecdsa-sha2-nistp521' - 'ssh-rsa' - 'rsa-sha2-512' - 'rsa-sha2-256' - 'ssh-dss'"/>
+                        </group>
+                        <group string="RSA Key"  attrs="{'invisible': ['|',('password_or_key', '=', 'password'),('protocol', '=', 'ftp')]}">
+                            <field name="user_public_key_name" attrs="{'invisible': True}"/>
+                            <field name="user_private_key_name" attrs="{'invisible': True}"/>
+                            <field name="user_public_key_data" filename="user_public_key_name" widget="binary" help="Public key '.pub'"/>
+                            <field name="user_private_key_data" filename="user_private_key_name" widget="binary" help="Private key"/>
+                        </group>
+                        <group string="FTP IDs"  attrs="{'invisible': [('protocol', '=', 'sftp')]}">
+                            <field name="server_host" help="Enter here the IP or Host name of the ftp/sftp server"/>
+                            <field name="server_port" help="Enter here the connection port of the ftp/sftp server"/>
+                            <field name="user_login" help="Enter here the user login of the ftp/sftp server"/>
+                            <field name="user_password" help="Enter here the user password of the ftp/sftp server"/>
+                        </group>
+                    </group>
+                    <group string="Methods Testing"  attrs="{'invisible': [('show_test_features', '=', False)]}">
+                        <group string="Fields">
+                            <field name="test_text" string="Response" widget="section_and_note_text" help="Test - Contains returns from test functions"/>
+                            <field name="test_path" help="Test - Primary Path, used by all test functions"/>
+                            <field name="test_path_secondary" help="Test - Secondary Path, used only by copy (from primary to secondary)"/>
+                            <field name="test_index" help="Test - Index, 0 for first item in the list, 1 for second, ..., used by 'Get File Data', 'Get File Name', Delete File By Index'"/>
+                            <field name="test_foldername" help="Test - Folder name for 'Make Directory' and 'Remove Directory'"/>
+                            <field name="test_filename" help="Test - Filename completed by 'Get File Name' and used by 'Upload File', 'Move File', 'Delete File By Name'"/>
+                            <field name="test_filedata" filename="test_filename" widget="binary" help="Test - File data, used by 'Upload File', 'Move File'"/>
+                        </group>
+                        <group string="Basic Methods">
+                            <button name="test_list_dir" string="List Directory" type="object" class="btn btn-sm btn-secondary"/>
+                            <button name="test_count_dir_elements" string="Count Directory Elements" type="object" class="btn btn-sm btn-secondary"/>
+                        </group>
+                        <group string="File Methods">
+                            <button name="test_get_file_data" string="Get File Data" type="object" class="btn btn-sm btn-secondary"/>
+                            <button name="test_get_file_name" string="Get File Name" type="object" class="btn btn-sm btn-secondary"/>
+                            <button name="test_delete_file_by_name" string="Delete File By Name" type="object" class="btn btn-sm btn-secondary"/>
+                            <button name="test_delete_file_by_index" string="Delete File By Index" type="object" class="btn btn-sm btn-secondary"/>
+                            <button name="test_upload_file" string="Upload File" type="object" class="btn btn-sm btn-secondary"/>
+                            <button name="test_move_file" string="Move File" type="object" class="btn btn-sm btn-secondary"/>
+                            <button name="test_get_all_files_by_matching_string" string="Get All Files By Matching Name" type="object" class="btn btn-sm btn-secondary"/>
+                        </group>
+                        <group string="Folder Methods">
+                            <button name="test_mkdir" string="Make Directory" type="object" class="btn btn-sm btn-secondary"/>
+                            <button name="test_rmdir" string="Remove Directory" type="object" class="btn btn-sm btn-secondary"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ftp_provider_settings_tree" model="ir.ui.view">
+        <field name="name">ftp.provider.config.tree</field>
+        <field name="model">ftp.provider</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="company_id"/>
+                <field name="protocol"/>
+                <field name="server_host"/>
+                <field name="server_port"/>
+                <field name="user_login"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_ftp_provider_config" model="ir.actions.act_window">
+        <field name="name">FTP Provider Configuration</field>
+        <field name="res_model">ftp.provider</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="ftp_provider_settings_tree"/>
+    </record>
+
+    <menuitem
+        id="menu_ftp_provider"
+        name="FTP Provider"
+        parent="base.menu_custom"
+        sequence="1000">
+        <menuitem
+            id="menu_ftp_provider_config"
+            name="Configuration"
+            action="action_ftp_provider_config"
+            sequence="1"/>
+    </menuitem>
+</odoo>

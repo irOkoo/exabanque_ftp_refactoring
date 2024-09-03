@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ftpbank>
+    <sens>emission</sens>
+    <repertoire>emission</repertoire>
+    <fichier>LCR_PAY0003.txt</fichier>
+    <com_ref>test</com_ref>
+    <resultat>OKxxx</resultat>
+    <rapport>xxx - good import</rapport>
+</ftpbank>

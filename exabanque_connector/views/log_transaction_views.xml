@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="transaction_log_form_view" model="ir.ui.view">
+        <field name="name">log.transaction.form</field>
+        <field name="model">log.transaction</field>
+        <field name="arch" type="xml">
+            <form string="Transaction">
+                <sheet>
+                    <header>
+                        <field name="state" invisible="1"/>
+                        <button name="action_lcr" string="Envoyer" type="object" class="oe_highlight" attrs="{'invisible': ['|',('state', '!=', 'new'),('action_type','!=','lcr')]}"/>
+                        <button name="action_statement" string="Import Relevé Bancaire" type="object" class="oe_highlight" attrs="{'invisible': ['|',('state', '!=', 'new'),('action_type','=','lcr')]}"/>   
+                    </header>
+                    <group string="General Info">
+                        <field name="state" readonly="1"/>
+                        <field name="create_date" readonly="1"/>
+                        <field name="action_type" readonly="1"/>
+                        <field name="treatment_date" readonly="1"/>
+                    </group>
+                    <group string="File Data">
+                        <field name="file_name" invisible="1" readonly="1"/>
+                        <field name="file_data" filename="file_name" widget="binary" readonly="1"/>
+                    </group>
+                    <group string="Order Info">
+                        <field name="company_id" readonly="1"/>
+                        <field name="account_payment_order_id" readonly="1"/>
+                        <field name="journal_bank_id" readonly="1"/>
+                    </group>
+                    <group string="Exabanque Logs">
+                        <field name="exa_log_ids" readonly="1">
+                            <tree>
+                                <field name="direction"/>
+                                <field name="directory"/>
+                                <field name="result"/>
+                                <field name="report"/>
+                                <field name="date"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <group string="Error Data">
+                        <field name="error_ids" readonly="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="model"/>
+                                <field name="operation"/>
+                                <field name="error_message"/>
+                                <field name="timestamp"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="transaction_log_tree_view" model="ir.ui.view">
+        <field name="name">log.transaction.tree</field>
+        <field name="model">log.transaction</field>
+        <field name="arch" type="xml">
+            <tree>
+                <header>
+                    <button name="run_cron" string="Import Relevés" type="object" class="oe_highlight" groups="account.group_account_manager"/>
+                </header>
+                <field name="create_date"/>
+                <field name="state" readonly="1"/>                
+                <field name="journal_bank_id" readonly="1"/>
+                <field name="treatment_date" readonly="1"/>
+                <field name="action_type" readonly="1"/>
+                <field name="file_name" readonly="1"/>
+                <field name="company_id" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_transaction_log" model="ir.actions.act_window">
+        <field name="name">Transaction Logs</field>
+        <field name="res_model">log.transaction</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="transaction_log_tree_view"/>
+    </record>
+</odoo>

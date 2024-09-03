@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="base_connector_form_view" model="ir.ui.view">
+        <field name="name">base.connector.form</field>
+        <field name="model">base.connector</field>
+        <field name="arch" type="xml">
+            <form string="Base Connector">
+                <sheet>
+                    <group>
+                        <field name="active"/>
+                        <field name="action_type"/>
+                        <field name="company_id"/>
+                        <field name="use_cron" attrs="{'invisible': [('action_type', '!=', 'lcr')]}"/>
+                        <field name="test_mode" attrs="{'invisible': [('action_type', '!=', 'lcr')]}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="base_connector_tree_view" model="ir.ui.view">
+        <field name="name">base.connector.tree</field>
+        <field name="model">base.connector</field>
+        <field name="arch" type="xml">
+            <tree>
+                <header>
+                    <button name="run_cron" string="Test Cron" type="object" class="oe_highlight"/>
+                </header>
+                <field name="active"/>
+                <field name="action_type"/>
+                <field name="company_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_base_connector" model="ir.actions.act_window">
+        <field name="name">Base Connector</field>
+        <field name="res_model">base.connector</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="base_connector_tree_view"/>
+    </record>
+</odoo>

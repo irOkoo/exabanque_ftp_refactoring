@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="base_ftp_form_view" model="ir.ui.view">
+        <field name="name">base.ftp.form.view</field>
+        <field name="model">base.ftp</field>
+        <field name="arch" type="xml">
+            <form string="FTP Server" version="7.0">
+                <sheet>
+                    <button name="action_test_connection" string="Test Connection" type="object" class="oe_highlight"/>
+                    <button name="action_list_root_dir" string="List Root Directory" type="object" class="oe_highlight"/>
+                    <button name="action_list_main_dir" string="List Main Directory" type="object" class="oe_highlight"/>
+                    <group string="Server">
+                        <field name="protocol"/>
+                        <field name="server_host"/>
+                        <field name="server_port" attrs="{'invisible': [('protocol', '=', 'ftps')]}"/>
+                        <field name="autoaddpolicy" attrs="{'invisible': [('protocol', '=', 'ftps')]}"/>
+                        <field name="disabled_algorithms" attrs="{'invisible': [('protocol', '=', 'ftps')]}"/>
+                        <field name="allow_agent" attrs="{'invisible': [('protocol', '=', 'ftps')]}"/>
+                        <field name="look_for_keys" attrs="{'invisible': [('protocol', '=', 'ftps')]}"/>
+                    </group>
+                    <group string="User">
+                        <field name="user_login"/>
+                        <field name="password_or_rsa_key"/>
+                        <field name="user_password" attrs="{'invisible': [('password_or_rsa_key', '!=', 'password')]}"/>
+                        <!--<button name="generate_rsa_key" string="Generate RSA Keys" type="object" class="oe_highlight" attrs="{'invisible': [('password_or_rsa_key', '!=', 'rsa_key')]}"/>-->
+                        <!--<field name="user_rsa_public_key_data" filename="user_rsa_public_key_name" attrs="{'invisible': [('password_or_rsa_key', '!=', 'rsa_key')]}"/> ,'readonly': [(1, '=', 1)] -->
+                        <field name="user_rsa_private_key_data" filename="user_rsa_private_key_name" attrs="{'invisible': [('password_or_rsa_key', '!=', 'rsa_key')]}"/> <!-- ,'readonly': [(1, '=', 1)] -->
+                    </group>
+                    <group string="Company">
+                        <field name="company_id"/>
+                    </group>
+                    <group string="Main Directory">
+                        <field name="main_path"/>
+                    </group>
+                    <group>
+                        <group string="Retrieve - From Exabanque into Odoo">
+                            <field name="success_recept" readonly="1"/>
+                            <field name="export_path" readonly="1"/>
+                            <field name="log_path" readonly="1"/>
+                        </group>
+                        <group string="Send - From Odoo into Exabanque">
+                            <field name="import_path" readonly="1"/>
+                            <field name="emission_path" readonly="1"/>
+                        </group>
+                        <group string="Process">
+                            <field name="process_path" readonly="1"/>
+                            <field name="success_path" readonly="1"/>
+                            <field name="error_path" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Other">
+                        <field name="user_certificat"/>
+                        <field name="root_certificat"/>
+                        <field name="followers"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="base_ftp_tree_view" model="ir.ui.view">
+        <field name="name">base.ftp.tree.view</field>
+        <field name="model">base.ftp</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="server_host"/>
+                <field name="server_port"/>
+                <field name="protocol"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_base_ftp" model="ir.actions.act_window">
+        <field name="name">FTP Servers</field>
+        <field name="res_model">base.ftp</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="base_ftp_tree_view"/>
+    </record>
+</odoo>
